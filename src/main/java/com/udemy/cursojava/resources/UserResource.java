@@ -5,7 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.udemy.cursojava.entities.User;
+import com.udemy.cursojava.entities.UserX;
+
 
 //Resources: recurso web correspondente
 //À classe User...
@@ -17,8 +18,8 @@ public class UserResource {
 	//Tipo específico para retornar
 	//Respostas de requisições Web
 	@GetMapping
-	public ResponseEntity<User> findAll(){
-		User u = new User(1L, "Maria", "maria@gmail.com", "99999999", "12345");
+	public ResponseEntity<UserX> findAll(){
+		UserX u = new UserX(1L, "Maria", "maria@gmail.com", "99999999", "12345");
 		return ResponseEntity.ok().body(u);
 	}
 }
