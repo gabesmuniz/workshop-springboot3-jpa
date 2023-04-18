@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_user")
-public class UserX implements Serializable{
+public class User implements Serializable{
 	//Transformar em cadeia de bits para ser trafegado em rede
 	//E gravar os objetos em arquivos.
 	private static final long serialVersionUID = 1L;
@@ -24,10 +24,10 @@ public class UserX implements Serializable{
 	private String phone;
 	private String password;
 	
-	public UserX() {
+	public User() {
 	}
 
-	public UserX(Long id, String name, String email, String phone, String password) {
+	public User(Long id, String name, String email, String phone, String password) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
@@ -88,7 +88,7 @@ public class UserX implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		UserX other = (UserX) obj;
+		User other = (User) obj;
 		return Objects.equals(id, other.id);
 	}
 }
